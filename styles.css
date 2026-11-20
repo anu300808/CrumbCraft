@@ -1,0 +1,220 @@
+:root {
+  --bg: #fff8f1;
+  --card: #ffffff;
+  --brown: #5a3a29;
+  --pink: #e0527a;
+  --pink-dark: #c23e66;
+  --muted: #8a7566;
+  --line: #f0e1d3;
+  --ok: #3a9d5d;
+  --warn: #e69b1e;
+  --full: #d64545;
+  --radius: 14px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--brown);
+}
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 24px;
+  background: var(--brown);
+  color: #fff;
+}
+header h1 { margin: 0; font-size: 1.4rem; }
+nav { display: flex; gap: 8px; }
+
+.tab {
+  border: 0;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+.tab.active { background: var(--pink); }
+
+main { max-width: 1100px; margin: 0 auto; padding: 24px 16px 60px; }
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+.grid > .card { flex: 1 1 380px; }
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 20px;
+  box-shadow: 0 4px 14px rgba(90, 58, 41, 0.06);
+}
+.card h2 { margin-top: 0; font-size: 1.15rem; }
+
+label { display: block; margin: 14px 0 6px; font-weight: 600; font-size: 0.9rem; }
+label.check { display: flex; gap: 8px; align-items: center; font-weight: 500; }
+
+input[type="text"], input[type="tel"], input[type="date"], select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  font: inherit;
+  background: #fffdfb;
+  color: var(--brown);
+}
+input[type="range"] { width: 100%; accent-color: var(--pink); }
+
+.chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.chip {
+  border: 1px solid var(--pink);
+  background: #fff;
+  color: var(--pink);
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+.chip:hover { background: var(--pink); color: #fff; }
+
+.capacity { margin-top: 10px; }
+.bar {
+  height: 12px;
+  background: var(--line);
+  border-radius: 999px;
+  overflow: hidden;
+}
+.bar span {
+  display: block;
+  height: 100%;
+  width: 0;
+  background: var(--ok);
+  transition: width 0.3s, background 0.3s;
+}
+.bar span.warn { background: var(--warn); }
+.bar span.full { background: var(--full); }
+
+button.primary {
+  width: 100%;
+  margin-top: 12px;
+  padding: 13px;
+  border: 0;
+  border-radius: 10px;
+  background: var(--pink);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+button.primary:hover { background: var(--pink-dark); }
+button.primary:disabled { background: #ccc; cursor: not-allowed; }
+button.ghost {
+  margin-top: 14px;
+  padding: 8px 14px;
+  border: 1px solid var(--line);
+  background: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  color: var(--brown);
+}
+
+.hidden { display: none !important; }
+.center { text-align: center; }
+.muted { color: var(--muted); }
+.error { color: var(--full); min-height: 1.2em; margin: 10px 0 0; font-size: 0.9rem; }
+
+/* Cake preview */
+.cake-stage {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 230px;
+  padding-bottom: 10px;
+  background: linear-gradient(#fdecef, #fff);
+  border-radius: 12px;
+}
+#cake { display: flex; flex-direction: column; align-items: center; }
+.tier {
+  height: 52px;
+  border-radius: 10px 10px 6px 6px;
+  border-top: 14px solid var(--frost, #fff);
+  background: var(--sponge, #6b3f2a);
+  box-shadow: inset 0 -8px 0 rgba(0, 0, 0, 0.08);
+}
+.tier.heart { border-radius: 40px 40px 10px 10px; }
+.tier.square { border-radius: 4px; }
+.cake-msg {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--brown);
+  text-align: center;
+  padding: 4px 8px;
+  max-width: 200px;
+}
+.topper { font-size: 1.6rem; line-height: 1; }
+
+/* Tables */
+table { width: 100%; border-collapse: collapse; }
+td, th { padding: 8px 6px; text-align: left; border-bottom: 1px solid var(--line); font-size: 0.92rem; }
+td:last-child, th:last-child { text-align: right; }
+.price tr.total td { font-weight: 700; font-size: 1.15rem; border-bottom: 0; color: var(--pink); }
+.price tr.discount td { color: var(--ok); }
+.table-wrap { overflow-x: auto; }
+.orders td:last-child, .orders th:last-child { text-align: right; }
+
+.cap-row { margin-bottom: 14px; }
+.cap-row .head { display: flex; justify-content: space-between; font-size: 0.9rem; margin-bottom: 4px; }
+
+/* Receipt */
+.receipt { border: 2px dashed var(--pink); max-width: 560px; margin: 0 auto; }
+.receipt h2 { text-align: center; }
+.receipt .status {
+  display: inline-block;
+  padding: 3px 12px;
+  background: #e5f6ea;
+  color: var(--ok);
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+.receipt dl { display: grid; grid-template-columns: 130px 1fr; gap: 6px 10px; margin: 14px 0; }
+.receipt dt { color: var(--muted); }
+.receipt dd { margin: 0; font-weight: 600; }
+
+@media print {
+  header, #customer .grid, #baker, button { display: none !important; }
+  .receipt { border: 0; }
+}
+@media (max-width: 520px) {
+  .receipt dl { grid-template-columns: 1fr; }
+}
+
+/* Top view + payment */
+.alert { padding: 10px 14px; border-radius: 10px; background: #fde8e8; color: #8a1f1f; margin-bottom: 14px; font-size: 0.9rem; }
+.view-toggle { display: inline-flex; border: 1px solid var(--line); border-radius: 999px; overflow: hidden; margin-bottom: 10px; }
+.view-toggle button { border: 0; background: #fff; color: var(--brown); padding: 6px 16px; cursor: pointer; font: inherit; font-size: 0.85rem; }
+.view-toggle button.on { background: var(--brown); color: #fff; }
+#cakeTop { width: 210px; align-self: center; }
+#cakeTop svg, .receipt-cake svg { width: 100%; height: auto; display: block; }
+.receipt-cake { width: 170px; margin: 10px auto 0; }
+.pay-opts { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+label.pay-opt { margin: 0; position: relative; }
+.pay-opt input { position: absolute; opacity: 0; }
+.pay-opt span { display: block; padding: 10px 12px; border: 1px solid var(--line); border-radius: 10px; background: #fffdfb; cursor: pointer; font-size: 0.88rem; font-weight: 600; }
+.pay-opt input:checked + span { border-color: var(--pink); background: #fdecef; color: var(--pink-dark); }
+.pay-opt input:focus-visible + span { outline: 2px solid var(--pink); outline-offset: 2px; }
+.pay-fields .two { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.note { font-size: 0.8rem; margin: 10px 0 0; }

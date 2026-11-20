@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CrumbCraft – CakeCraft Festival Hack</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>🎂 CrumbCraft</h1>
+    <nav>
+      <button class="tab active" data-view="customer">Customer</button>
+      <button class="tab" data-view="baker">Baker Dashboard</button>
+    </nav>
+  </header>
+
+  <main>
+    <div id="storageWarn" class="alert hidden">Browser storage is unavailable, so orders will be lost when you refresh.</div>
+
+    <!-- CUSTOMER VIEW -->
+    <section id="customer" class="view">
+      <div class="grid">
+        <div class="card">
+          <h2>Customize your cake</h2>
+
+          <label>Weight: <b id="weightLabel">2 kg</b></label>
+          <input type="range" id="weight" min="500" max="5000" step="500" value="2000">
+
+          <label for="flavor">Flavor</label>
+          <select id="flavor"></select>
+
+          <label for="shape">Shape</label>
+          <select id="shape"></select>
+
+          <label for="frosting">Frosting style</label>
+          <select id="frosting"></select>
+
+          <label class="check"><input type="checkbox" id="fondant"> Custom fondant decorations (+₹250)</label>
+
+          <label for="message">Message on cake</label>
+          <input type="text" id="message" maxlength="40" placeholder="Happy Birthday Rahul">
+
+          <label for="name">Your name</label>
+          <input type="text" id="name" placeholder="Full name">
+
+          <label for="phone">Phone</label>
+          <input type="tel" id="phone" placeholder="10-digit mobile">
+
+          <label for="mode">Delivery / Pickup</label>
+          <select id="mode">
+            <option>Pickup</option>
+            <option>Delivery</option>
+          </select>
+
+          <label for="date">Delivery / pickup date</label>
+          <input type="date" id="date">
+          <div class="chips" id="festivalChips"></div>
+          <div id="capacityBox" class="capacity hidden">
+            <div class="bar"><span id="capacityFill"></span></div>
+            <small id="capacityText"></small>
+          </div>
+
+          <label for="slot">Time slot</label>
+          <select id="slot">
+            <option>10:00 AM – 12:00 PM</option>
+            <option>12:00 PM – 02:00 PM</option>
+            <option>02:00 PM – 04:00 PM</option>
+            <option>04:00 PM – 06:00 PM</option>
+          </select>
+        </div>
+
+        <div class="card">
+          <h2>Preview</h2>
+          <div class="view-toggle" role="group" aria-label="Cake view">
+            <button type="button" data-view="side" class="on" aria-pressed="true">Side view</button>
+            <button type="button" data-view="top" aria-pressed="false">Top view</button>
+          </div>
+          <div class="cake-stage"><div id="cake"></div><div id="cakeTop" class="hidden"></div></div>
+          <p id="cakeCaption" class="center muted"></p>
+
+          <h2>Live price</h2>
+          <table class="price">
+            <tbody id="priceRows"></tbody>
+          </table>
+
+          <h2>Payment</h2>
+          <div class="pay-opts" role="radiogroup" aria-label="Payment method">
+            <label class="pay-opt"><input type="radio" name="pay" value="upi" checked><span>UPI</span></label>
+            <label class="pay-opt"><input type="radio" name="pay" value="card"><span>Credit / debit card</span></label>
+            <label class="pay-opt"><input type="radio" name="pay" value="net"><span>Net banking</span></label>
+            <label class="pay-opt"><input type="radio" name="pay" value="cash"><span>Cash at pickup / delivery</span></label>
+          </div>
+          <div class="pay-fields" data-for="upi">
+            <label for="upiId">UPI ID</label>
+            <input type="text" id="upiId" placeholder="name@bank" autocomplete="off">
+          </div>
+          <div class="pay-fields hidden" data-for="card">
+            <label for="cardNo">Card number</label>
+            <input type="text" id="cardNo" inputmode="numeric" autocomplete="cc-number" placeholder="4242 4242 4242 4242">
+            <div class="two">
+              <div><label for="cardExp">Expiry</label><input type="text" id="cardExp" inputmode="numeric" autocomplete="cc-exp" placeholder="MM/YY"></div>
+              <div><label for="cardCvv">CVV</label><input type="text" id="cardCvv" inputmode="numeric" maxlength="4" autocomplete="cc-csc" placeholder="123"></div>
+            </div>
+            <label for="cardName">Name on card</label>
+            <input type="text" id="cardName" autocomplete="cc-name" placeholder="Name as printed">
+          </div>
+          <div class="pay-fields hidden" data-for="net">
+            <label for="bank">Bank</label>
+            <select id="bank"><option value="">Choose your bank</option></select>
+          </div>
+          <div class="pay-fields hidden" data-for="cash">
+            <p class="muted note">Nothing to pay now. Pay the full amount when you collect or receive the cake.</p>
+          </div>
+          <p class="muted note">Demo checkout: no money moves, and only the last 4 card digits are kept.</p>
+          <p id="formError" class="error"></p>
+          <button id="orderBtn" class="primary">Confirm pre-order</button>
+        </div>
+      </div>
+
+      <!-- RECEIPT -->
+      <div id="receipt" class="card receipt hidden"></div>
+    </section>
+
+    <!-- BAKER VIEW -->
+    <section id="baker" class="view hidden">
+      <div class="grid">
+        <div class="card">
+          <h2>Daily capacity planner</h2>
+          <div id="capacityList"></div>
+        </div>
+        <div class="card">
+          <h2>Ingredient forecast</h2>
+          <label for="forecastDate">Production date</label>
+          <select id="forecastDate"></select>
+          <table class="forecast">
+            <thead><tr><th>Ingredient</th><th>Required</th></tr></thead>
+            <tbody id="forecastRows"></tbody>
+          </table>
+          <p id="forecastSummary" class="muted"></p>
+        </div>
+      </div>
+      <div class="card">
+        <h2>Orders for selected date</h2>
+        <div class="table-wrap">
+          <table class="orders">
+            <thead><tr><th>ID</th><th>Customer</th><th>Cake</th><th>Slot</th><th>Payment</th><th>Total</th></tr></thead>
+            <tbody id="orderRows"></tbody>
+          </table>
+        </div>
+        <button id="resetBtn" class="ghost">Reset demo data</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
