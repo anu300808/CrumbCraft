@@ -1,0 +1,663 @@
+{
+  "users": [
+    {
+      "name": "Head Baker",
+      "email": "baker@crumbcraft.demo",
+      "phone": "",
+      "role": "baker",
+      "hash": "0521346f7ba94af178461928b40f099e:dd5df3a52f2264362fa901b0cb770f5d835392d2c9a0f6fecf99d5302ae87dddd045704c08679a5828db92d8c96dca4e48e239a925a0416bc007397c1fb3c51c"
+    },
+    {
+      "name": "anu",
+      "email": "you12@gmail.com",
+      "phone": "8900099876",
+      "role": "customer",
+      "hash": "9483a9e09d778ae12228abec5547af0a:b283f68e46eb62f5f7abaee4ded6c70ed21c09e1e3d822980f41a6e7e5b4748219929f0c183e072ba2b494e41533cd0e90274fdb0eceff8665ff4dcd68e6a37b"
+    }
+  ],
+  "orders": [
+    {
+      "id": "CC-SEED01",
+      "customer": "Aarav",
+      "phone": "9000000000",
+      "mode": "Pickup",
+      "date": "2026-12-24",
+      "slot": "10:00 AM – 12:00 PM",
+      "cfg": {
+        "weight": 1000,
+        "flavor": "choc",
+        "shape": "round",
+        "frosting": "bc",
+        "fondant": false,
+        "message": "Season's Greetings"
+      },
+      "total": 64800,
+      "placedOn": "2026-11-22",
+      "pricing": {
+        "base": 60000,
+        "flavorAddon": 12000,
+        "frostingFee": 0,
+        "shapeFee": 0,
+        "fondant": 0,
+        "subtotal": 72000,
+        "discount": 7200,
+        "discountLabel": "Early-bird 10% (Christmas Eve)",
+        "total": 64800
+      },
+      "userEmail": "",
+      "payment": {
+        "method": "upi",
+        "label": "UPI",
+        "detail": "UPI · ra***@okhdfc",
+        "status": "Paid",
+        "txn": "TXNSEED1"
+      },
+      "status": "Completed",
+      "statusAt": "2026-11-22T02:17:42.462Z"
+    },
+    {
+      "id": "CC-SEED02",
+      "customer": "Priya",
+      "phone": "9000000000",
+      "mode": "Pickup",
+      "date": "2026-12-24",
+      "slot": "10:00 AM – 12:00 PM",
+      "cfg": {
+        "weight": 2000,
+        "flavor": "red",
+        "shape": "round",
+        "frosting": "bc",
+        "fondant": false,
+        "message": "Season's Greetings"
+      },
+      "total": 124200,
+      "placedOn": "2026-11-22",
+      "pricing": {
+        "base": 120000,
+        "flavorAddon": 18000,
+        "frostingFee": 0,
+        "shapeFee": 0,
+        "fondant": 0,
+        "subtotal": 138000,
+        "discount": 13800,
+        "discountLabel": "Early-bird 10% (Christmas Eve)",
+        "total": 124200
+      },
+      "userEmail": "",
+      "payment": {
+        "method": "card",
+        "label": "Card",
+        "detail": "Visa •••• 4242",
+        "status": "Paid",
+        "txn": "TXNSEED2"
+      },
+      "status": "Completed",
+      "statusAt": "2026-11-22T02:17:44.192Z"
+    },
+    {
+      "id": "CC-SEED03",
+      "customer": "Kiran",
+      "phone": "9000000000",
+      "mode": "Pickup",
+      "date": "2026-12-24",
+      "slot": "10:00 AM – 12:00 PM",
+      "cfg": {
+        "weight": 1500,
+        "flavor": "mango",
+        "shape": "round",
+        "frosting": "bc",
+        "fondant": false,
+        "message": "Season's Greetings"
+      },
+      "total": 101250,
+      "placedOn": "2026-11-22",
+      "pricing": {
+        "base": 90000,
+        "flavorAddon": 22500,
+        "frostingFee": 0,
+        "shapeFee": 0,
+        "fondant": 0,
+        "subtotal": 112500,
+        "discount": 11250,
+        "discountLabel": "Early-bird 10% (Christmas Eve)",
+        "total": 101250
+      },
+      "userEmail": "",
+      "payment": {
+        "method": "net",
+        "label": "Net banking",
+        "detail": "HDFC Bank",
+        "status": "Paid",
+        "txn": "TXNSEED3"
+      },
+      "status": "Completed",
+      "statusAt": "2026-11-22T02:17:45.920Z"
+    },
+    {
+      "id": "CC-SEED04",
+      "customer": "Sneha",
+      "phone": "9000000000",
+      "mode": "Pickup",
+      "date": "2026-12-24",
+      "slot": "10:00 AM – 12:00 PM",
+      "cfg": {
+        "weight": 3000,
+        "flavor": "bf",
+        "shape": "round",
+        "frosting": "bc",
+        "fondant": false,
+        "message": "Season's Greetings"
+      },
+      "total": 178200,
+      "placedOn": "2026-11-22",
+      "pricing": {
+        "base": 180000,
+        "flavorAddon": 18000,
+        "frostingFee": 0,
+        "shapeFee": 0,
+        "fondant": 0,
+        "subtotal": 198000,
+        "discount": 19800,
+        "discountLabel": "Early-bird 10% (Christmas Eve)",
+        "total": 178200
+      },
+      "userEmail": "",
+      "payment": {
+        "method": "cash",
+        "label": "Cash",
+        "detail": "Cash at pickup",
+        "status": "Due at handover",
+        "txn": ""
+      },
+      "status": "In making",
+      "statusAt": "2026-11-22T02:17:48.467Z"
+    },
+    {
+      "id": "CC-SEED05",
+      "customer": "Vikram",
+      "phone": "9000000000",
+      "mode": "Pickup",
+      "date": "2026-12-24",
+      "slot": "10:00 AM – 12:00 PM",
+      "cfg": {
+        "weight": 500,
+        "flavor": "van",
+        "shape": "round",
+        "frosting": "bc",
+        "fondant": false,
+        "message": "Season's Greetings"
+      },
+      "total": 27000,
+      "placedOn": "2026-11-22",
+      "pricing": {
+        "base": 30000,
+        "flavorAddon": 0,
+        "frostingFee": 0,
+        "shapeFee": 0,
+        "fondant": 0,
+        "subtotal": 30000,
+        "discount": 3000,
+        "discountLabel": "Early-bird 10% (Christmas Eve)",
+        "total": 27000
+      },
+      "userEmail": "",
+      "payment": {
+        "method": "upi",
+        "label": "UPI",
+        "detail": "UPI · ra***@okhdfc",
+        "status": "Paid",
+        "txn": "TXNSEED1"
+      },
+      "status": "Ready",
+      "statusAt": "2026-11-22T02:17:50.684Z"
+    },
+    {
+      "id": "CC-SEED06",
+      "customer": "Ananya",
+      "phone": "9000000000",
+      "mode": "Pickup",
+      "date": "2026-12-24",
+      "slot": "10:00 AM – 12:00 PM",
+      "cfg": {
+        "weight": 2500,
+        "flavor": "bs",
+        "shape": "round",
+        "frosting": "bc",
+        "fondant": false,
+        "message": "Season's Greetings"
+      },
+      "total": 141750,
+      "placedOn": "2026-11-22",
+      "pricing": {
+        "base": 150000,
+        "flavorAddon": 7500,
+        "frostingFee": 0,
+        "shapeFee": 0,
+        "fondant": 0,
+        "subtotal": 157500,
+        "discount": 15750,
+        "discountLabel": "Early-bird 10% (Christmas Eve)",
+        "total": 141750
+      },
+      "userEmail": "",
+      "payment": {
+        "method": "card",
+        "label": "Card",
+        "detail": "Visa •••• 4242",
+        "status": "Paid",
+        "txn": "TXNSEED2"
+      },
+      "status": "Ready",
+      "statusAt": "2026-11-22T02:17:52.218Z"
+    },
+    {
+      "id": "CC-SEED07",
+      "customer": "Rohit",
+      "phone": "9000000000",
+      "mode": "Pickup",
+      "date": "2026-12-24",
+      "slot": "10:00 AM – 12:00 PM",
+      "cfg": {
+        "weight": 1000,
+        "flavor": "pine",
+        "shape": "round",
+        "frosting": "bc",
+        "fondant": false,
+        "message": "Season's Greetings"
+      },
+      "total": 54000,
+      "placedOn": "2026-11-22",
+      "pricing": {
+        "base": 60000,
+        "flavorAddon": 0,
+        "frostingFee": 0,
+        "shapeFee": 0,
+        "fondant": 0,
+        "subtotal": 60000,
+        "discount": 6000,
+        "discountLabel": "Early-bird 10% (Christmas Eve)",
+        "total": 54000
+      },
+      "userEmail": "",
+      "payment": {
+        "method": "net",
+        "label": "Net banking",
+        "detail": "HDFC Bank",
+        "status": "Paid",
+        "txn": "TXNSEED3"
+      }
+    },
+    {
+      "id": "CC-SEED08",
+      "customer": "Meera",
+      "phone": "9000000000",
+      "mode": "Pickup",
+      "date": "2026-12-24",
+      "slot": "10:00 AM – 12:00 PM",
+      "cfg": {
+        "weight": 2000,
+        "flavor": "straw",
+        "shape": "round",
+        "frosting": "bc",
+        "fondant": false,
+        "message": "Season's Greetings"
+      },
+      "total": 113400,
+      "placedOn": "2026-11-22",
+      "pricing": {
+        "base": 120000,
+        "flavorAddon": 6000,
+        "frostingFee": 0,
+        "shapeFee": 0,
+        "fondant": 0,
+        "subtotal": 126000,
+        "discount": 12600,
+        "discountLabel": "Early-bird 10% (Christmas Eve)",
+        "total": 113400
+      },
+      "userEmail": "",
+      "payment": {
+        "method": "cash",
+        "label": "Cash",
+        "detail": "Cash at pickup",
+        "status": "Due at handover",
+        "txn": ""
+      }
+    },
+    {
+      "id": "CC-SEED09",
+      "customer": "Arjun",
+      "phone": "9000000000",
+      "mode": "Pickup",
+      "date": "2026-12-24",
+      "slot": "10:00 AM – 12:00 PM",
+      "cfg": {
+        "weight": 1500,
+        "flavor": "mocha",
+        "shape": "round",
+        "frosting": "bc",
+        "fondant": false,
+        "message": "Season's Greetings"
+      },
+      "total": 97200,
+      "placedOn": "2026-11-22",
+      "pricing": {
+        "base": 90000,
+        "flavorAddon": 18000,
+        "frostingFee": 0,
+        "shapeFee": 0,
+        "fondant": 0,
+        "subtotal": 108000,
+        "discount": 10800,
+        "discountLabel": "Early-bird 10% (Christmas Eve)",
+        "total": 97200
+      },
+      "userEmail": "",
+      "payment": {
+        "method": "upi",
+        "label": "UPI",
+        "detail": "UPI · ra***@okhdfc",
+        "status": "Paid",
+        "txn": "TXNSEED1"
+      }
+    },
+    {
+      "id": "CC-SEED10",
+      "customer": "Divya",
+      "phone": "9000000000",
+      "mode": "Pickup",
+      "date": "2026-12-25",
+      "slot": "10:00 AM – 12:00 PM",
+      "cfg": {
+        "weight": 1000,
+        "flavor": "rasm",
+        "shape": "round",
+        "frosting": "bc",
+        "fondant": false,
+        "message": "Season's Greetings"
+      },
+      "total": 72900,
+      "placedOn": "2026-11-22",
+      "pricing": {
+        "base": 60000,
+        "flavorAddon": 21000,
+        "frostingFee": 0,
+        "shapeFee": 0,
+        "fondant": 0,
+        "subtotal": 81000,
+        "discount": 8100,
+        "discountLabel": "Early-bird 10% (Christmas)",
+        "total": 72900
+      },
+      "userEmail": "",
+      "payment": {
+        "method": "card",
+        "label": "Card",
+        "detail": "Visa •••• 4242",
+        "status": "Paid",
+        "txn": "TXNSEED2"
+      }
+    },
+    {
+      "id": "CC-SEED11",
+      "customer": "Imran",
+      "phone": "9000000000",
+      "mode": "Pickup",
+      "date": "2026-12-25",
+      "slot": "10:00 AM – 12:00 PM",
+      "cfg": {
+        "weight": 2000,
+        "flavor": "choc",
+        "shape": "round",
+        "frosting": "bc",
+        "fondant": false,
+        "message": "Season's Greetings"
+      },
+      "total": 129600,
+      "placedOn": "2026-11-22",
+      "pricing": {
+        "base": 120000,
+        "flavorAddon": 24000,
+        "frostingFee": 0,
+        "shapeFee": 0,
+        "fondant": 0,
+        "subtotal": 144000,
+        "discount": 14400,
+        "discountLabel": "Early-bird 10% (Christmas)",
+        "total": 129600
+      },
+      "userEmail": "",
+      "payment": {
+        "method": "net",
+        "label": "Net banking",
+        "detail": "HDFC Bank",
+        "status": "Paid",
+        "txn": "TXNSEED3"
+      }
+    },
+    {
+      "id": "CC-SEED12",
+      "customer": "Neha",
+      "phone": "9000000000",
+      "mode": "Pickup",
+      "date": "2026-12-25",
+      "slot": "10:00 AM – 12:00 PM",
+      "cfg": {
+        "weight": 3000,
+        "flavor": "red",
+        "shape": "round",
+        "frosting": "bc",
+        "fondant": false,
+        "message": "Season's Greetings"
+      },
+      "total": 186300,
+      "placedOn": "2026-11-22",
+      "pricing": {
+        "base": 180000,
+        "flavorAddon": 27000,
+        "frostingFee": 0,
+        "shapeFee": 0,
+        "fondant": 0,
+        "subtotal": 207000,
+        "discount": 20700,
+        "discountLabel": "Early-bird 10% (Christmas)",
+        "total": 186300
+      },
+      "userEmail": "",
+      "payment": {
+        "method": "cash",
+        "label": "Cash",
+        "detail": "Cash at pickup",
+        "status": "Due at handover",
+        "txn": ""
+      }
+    },
+    {
+      "id": "CC-SEED13",
+      "customer": "Suresh",
+      "phone": "9000000000",
+      "mode": "Pickup",
+      "date": "2026-12-31",
+      "slot": "10:00 AM – 12:00 PM",
+      "cfg": {
+        "weight": 1500,
+        "flavor": "mango",
+        "shape": "round",
+        "frosting": "bc",
+        "fondant": false,
+        "message": "Season's Greetings"
+      },
+      "total": 101250,
+      "placedOn": "2026-11-22",
+      "pricing": {
+        "base": 90000,
+        "flavorAddon": 22500,
+        "frostingFee": 0,
+        "shapeFee": 0,
+        "fondant": 0,
+        "subtotal": 112500,
+        "discount": 11250,
+        "discountLabel": "Early-bird 10% (New Year's Eve)",
+        "total": 101250
+      },
+      "userEmail": "",
+      "payment": {
+        "method": "upi",
+        "label": "UPI",
+        "detail": "UPI · ra***@okhdfc",
+        "status": "Paid",
+        "txn": "TXNSEED1"
+      }
+    },
+    {
+      "id": "CC-SEED14",
+      "customer": "Pooja",
+      "phone": "9000000000",
+      "mode": "Pickup",
+      "date": "2026-12-31",
+      "slot": "10:00 AM – 12:00 PM",
+      "cfg": {
+        "weight": 1000,
+        "flavor": "bf",
+        "shape": "round",
+        "frosting": "bc",
+        "fondant": false,
+        "message": "Season's Greetings"
+      },
+      "total": 59400,
+      "placedOn": "2026-11-22",
+      "pricing": {
+        "base": 60000,
+        "flavorAddon": 6000,
+        "frostingFee": 0,
+        "shapeFee": 0,
+        "fondant": 0,
+        "subtotal": 66000,
+        "discount": 6600,
+        "discountLabel": "Early-bird 10% (New Year's Eve)",
+        "total": 59400
+      },
+      "userEmail": "",
+      "payment": {
+        "method": "card",
+        "label": "Card",
+        "detail": "Visa •••• 4242",
+        "status": "Paid",
+        "txn": "TXNSEED2"
+      }
+    },
+    {
+      "id": "CC-SEED15",
+      "customer": "Karthik",
+      "phone": "9000000000",
+      "mode": "Pickup",
+      "date": "2026-12-31",
+      "slot": "10:00 AM – 12:00 PM",
+      "cfg": {
+        "weight": 2500,
+        "flavor": "van",
+        "shape": "round",
+        "frosting": "bc",
+        "fondant": false,
+        "message": "Season's Greetings"
+      },
+      "total": 135000,
+      "placedOn": "2026-11-22",
+      "pricing": {
+        "base": 150000,
+        "flavorAddon": 0,
+        "frostingFee": 0,
+        "shapeFee": 0,
+        "fondant": 0,
+        "subtotal": 150000,
+        "discount": 15000,
+        "discountLabel": "Early-bird 10% (New Year's Eve)",
+        "total": 135000
+      },
+      "userEmail": "",
+      "payment": {
+        "method": "net",
+        "label": "Net banking",
+        "detail": "HDFC Bank",
+        "status": "Paid",
+        "txn": "TXNSEED3"
+      }
+    },
+    {
+      "id": "CC-119E0682",
+      "customer": "anu",
+      "phone": "8688016248",
+      "mode": "Pickup",
+      "date": "2026-12-24",
+      "slot": "10:00 AM – 12:00 PM",
+      "status": "Received",
+      "cfg": {
+        "weight": 2000,
+        "flavor": "bf",
+        "shape": "round",
+        "frosting": "bc",
+        "fondant": false,
+        "message": "ann"
+      },
+      "total": 118800,
+      "pricing": {
+        "base": 120000,
+        "flavorAddon": 12000,
+        "frostingFee": 0,
+        "shapeFee": 0,
+        "fondant": 0,
+        "subtotal": 132000,
+        "discount": 13200,
+        "discountLabel": "Early-bird 10% (Christmas Eve)",
+        "total": 118800
+      },
+      "placedOn": "2026-11-22",
+      "userEmail": "",
+      "payment": {
+        "method": "cash",
+        "label": "Cash",
+        "detail": "Cash at pickup",
+        "status": "Due at handover",
+        "txn": ""
+      }
+    },
+    {
+      "id": "CC-4A99CF63",
+      "customer": "anu",
+      "phone": "8900099876",
+      "mode": "Pickup",
+      "date": "2026-12-25",
+      "slot": "10:00 AM – 12:00 PM",
+      "status": "Received",
+      "cfg": {
+        "weight": 2000,
+        "flavor": "bf",
+        "shape": "round",
+        "frosting": "bc",
+        "fondant": false,
+        "message": "mmm"
+      },
+      "total": 118800,
+      "pricing": {
+        "base": 120000,
+        "flavorAddon": 12000,
+        "frostingFee": 0,
+        "shapeFee": 0,
+        "fondant": 0,
+        "subtotal": 132000,
+        "discount": 13200,
+        "discountLabel": "Early-bird 10% (Christmas)",
+        "total": 118800
+      },
+      "placedOn": "2026-11-22",
+      "userEmail": "you12@gmail.com",
+      "payment": {
+        "method": "cash",
+        "label": "Cash",
+        "detail": "Cash at pickup",
+        "status": "Due at handover",
+        "txn": ""
+      }
+    }
+  ]
+}

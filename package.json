@@ -1,0 +1,9 @@
+{
+  "name": "crumbcraft",
+  "version": "2.0.0",
+  "private": true,
+  "description": "CrumbCraft: festival cake pre-orders, capacity planning and ingredient forecasting",
+  "engines": { "node": ">=18" },
+  "scripts": { "start": "node server/server.js", "test": "node --test" },
+  "dependencies": { "express": "^4.19.2" }
+}
